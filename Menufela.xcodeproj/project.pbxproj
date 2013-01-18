@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C75E269E16A8E7470038AC75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75E269D16A8E7470038AC75 /* Cocoa.framework */; };
 		C75E26A816A8E7470038AC75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C75E26A616A8E7470038AC75 /* InfoPlist.strings */; };
+		C75E26B116A8E7600038AC75 /* Menufela.m in Sources */ = {isa = PBXBuildFile; fileRef = C75E26B016A8E7600038AC75 /* Menufela.m */; };
+		C75E26B616A8E9F30038AC75 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75E26B516A8E9F30038AC75 /* Carbon.framework */; };
+		C75E26B816A8EA660038AC75 /* FConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = C75E26B716A8EA660038AC75 /* FConvenience.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,11 @@
 		C75E26A516A8E7470038AC75 /* Menufela-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Menufela-Info.plist"; sourceTree = "<group>"; };
 		C75E26A716A8E7470038AC75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C75E26A916A8E7470038AC75 /* Menufela-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menufela-Prefix.pch"; sourceTree = "<group>"; };
+		C75E26AF16A8E7600038AC75 /* Menufela.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menufela.h; sourceTree = "<group>"; };
+		C75E26B016A8E7600038AC75 /* Menufela.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menufela.m; sourceTree = "<group>"; };
+		C75E26B416A8E81D0038AC75 /* FConvenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FConvenience.h; sourceTree = "<group>"; };
+		C75E26B516A8E9F30038AC75 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		C75E26B716A8EA660038AC75 /* FConvenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FConvenience.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C75E26B616A8E9F30038AC75 /* Carbon.framework in Frameworks */,
 				C75E269E16A8E7470038AC75 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				C75E26A316A8E7470038AC75 /* Menufela */,
+				C75E26B216A8E81D0038AC75 /* Dependencies */,
 				C75E269C16A8E7470038AC75 /* Frameworks */,
 				C75E269B16A8E7470038AC75 /* Products */,
 			);
@@ -54,6 +64,7 @@
 		C75E269C16A8E7470038AC75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C75E26B516A8E9F30038AC75 /* Carbon.framework */,
 				C75E269D16A8E7470038AC75 /* Cocoa.framework */,
 				C75E269F16A8E7470038AC75 /* Other Frameworks */,
 			);
@@ -74,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				C75E26A416A8E7470038AC75 /* Supporting Files */,
+				C75E26AF16A8E7600038AC75 /* Menufela.h */,
+				C75E26B016A8E7600038AC75 /* Menufela.m */,
 			);
 			path = Menufela;
 			sourceTree = "<group>";
@@ -86,6 +99,23 @@
 				C75E26A916A8E7470038AC75 /* Menufela-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C75E26B216A8E81D0038AC75 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				C75E26B316A8E81D0038AC75 /* FConvenience */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		C75E26B316A8E81D0038AC75 /* FConvenience */ = {
+			isa = PBXGroup;
+			children = (
+				C75E26B416A8E81D0038AC75 /* FConvenience.h */,
+				C75E26B716A8EA660038AC75 /* FConvenience.m */,
+			);
+			path = FConvenience;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C75E26B116A8E7600038AC75 /* Menufela.m in Sources */,
+				C75E26B816A8EA660038AC75 /* FConvenience.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,11 +255,13 @@
 		C75E26AD16A8E7470038AC75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Menufela/Menufela-Prefix.pch";
 				INFOPLIST_FILE = "Menufela/Menufela-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "-fobjc-gc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -236,11 +270,13 @@
 		C75E26AE16A8E7470038AC75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Menufela/Menufela-Prefix.pch";
 				INFOPLIST_FILE = "Menufela/Menufela-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "-fobjc-gc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -265,6 +301,7 @@
 				C75E26AE16A8E7470038AC75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
