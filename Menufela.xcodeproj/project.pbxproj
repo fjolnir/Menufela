@@ -84,9 +84,9 @@
 		C75E26A316A8E7470038AC75 /* Menufela */ = {
 			isa = PBXGroup;
 			children = (
-				C75E26A416A8E7470038AC75 /* Supporting Files */,
 				C75E26AF16A8E7600038AC75 /* Menufela.h */,
 				C75E26B016A8E7600038AC75 /* Menufela.m */,
+				C75E26A416A8E7470038AC75 /* Supporting Files */,
 			);
 			path = Menufela;
 			sourceTree = "<group>";
@@ -255,12 +255,14 @@
 		C75E26AD16A8E7470038AC75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Menufela/Menufela-Prefix.pch";
 				INFOPLIST_FILE = "Menufela/Menufela-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fobjc-gc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
@@ -270,6 +272,7 @@
 		C75E26AE16A8E7470038AC75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -1,8 +1,8 @@
 #import "Menufela.h"
 #import <Carbon/Carbon.h>
 
-#define ReadPref(key) (Defaults[@"Menufela_" key])
-#define WritePref(key, value) Defaults[@"Menufela_" key] = (value)
+#define ReadPref(key) [Defaults objectForKey:@"Menufela_" key]
+#define WritePref(key, value) [Defaults setObject:(value) forKey:@"Menufela_" key]
 
 @interface Menufela ()
 + (void)_updateMenubarState;
